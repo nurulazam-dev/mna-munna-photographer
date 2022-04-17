@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/Firebase.init';
 import SignInWithSocial from '../Login/SignInWithSocial/SignInWithSocial';
-// import { GoogleAuthProvider, sendEmailVerification } from 'firebase/auth';
 
-// const provider = new GoogleAuthProvider();
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [sendEmailVerification] = useSendEmailVerification(auth);
     const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
 
@@ -42,9 +41,10 @@ const Register = () => {
     if (user) {
         navigate('/login')
     }
+   
 
     return (
-        <div style={{width:"500px"}} className='container mx-auto border p-3 rounded mt-5 shadow'>
+        <div style={{ width: "500px" }} className='container mx-auto border p-3 rounded mt-5 shadow'>
             <h2 className='text-primary text-center mt-2'>Please Register</h2>
             <form onSubmit={handleRegister} className='w-75 mx-auto'>
                 <div className="mb-3">
@@ -60,7 +60,14 @@ const Register = () => {
                     <input type="password" onBlur={handleConfirmPassword} className="form-control fs-6" id="exampleInputConfirmPassword1" placeholder='Confirm Password' required />
                 </div>
                 <p className='text-danger'>{error}</p>
-                <button type="submit" className="btn btn-primary w-100 mx-auto fs-5" onClick={() => createUserWithEmailAndPassword(email, password)}>Register</button>
+                
+                <button type="submit" className="btn btn-primary w-100 mx-auto fs-5"
+                    onClick={(() => createUserWithEmailAndPassword(email, password)) &&
+                        (async () => {
+                            await sendEmailVerification();
+                            alert('Sent email');
+                        })}
+                >Register</button>
             </form>
 
 

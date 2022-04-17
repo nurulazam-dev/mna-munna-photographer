@@ -13,7 +13,7 @@ const SignInWithSocial = () => {
     if (user) {
         navigate('/')
     }
-    
+
     return (
         <div>
             <p className='text-center'>If you forget password ?<button className='btn btn-link text-primary text-decoration-none'>Reset Password</button> </p>
