@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
+import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
@@ -10,6 +11,7 @@ import Register from './Pages/Register/Register';
 function App() {
   return (
     <div className="App">
+      <Header/>
       <h2>MNA Munna Photographer</h2>
       <Routes>
         <Route path='/' element={<Home />}></Route>
