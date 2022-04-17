@@ -23,9 +23,12 @@ const Header = () => {
                         <Nav.Link as={Link} to="blogs" className='text-white'>Blogs</Nav.Link>
                         <Nav.Link as={Link} to="about" className='text-white'>About</Nav.Link>
                         {user ? <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign out</button>
-                            : (<Nav.Link as={Link} to="login" className='text-white'>
+                            : (<Nav.Link as={Link} to="register" className='text-white'>
+                                Register
+                            </Nav.Link>) || (<Nav.Link as={Link} to="login" className='text-white'>
                                 Login
-                            </Nav.Link>)}
+                            </Nav.Link>)
+                            }
                     </Nav>
                 </Navbar.Collapse>
             </Container>

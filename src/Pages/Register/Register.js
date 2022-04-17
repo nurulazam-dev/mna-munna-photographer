@@ -40,24 +40,24 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
     };
     if (user) {
-        navigate('/')
+        navigate('/login')
     }
 
     return (
-        <div className='container w-50 mx-auto border p-3 rounded mt-5 shadow'>
+        <div style={{width:"500px"}} className='container mx-auto border p-3 rounded mt-5 shadow'>
             <h2 className='text-primary text-center mt-2'>Please Register</h2>
             <form onSubmit={handleRegister} className='w-75 mx-auto'>
                 <div className="mb-3">
-                    <input type="text" className="form-control fs-5" id="exampleInputName1" placeholder='Your Name' />
+                    <input type="text" className="form-control fs-6" id="exampleInputName1" placeholder='Your Name' />
                 </div>
                 <div className="mb-3">
-                    <input type="email" onBlur={handleEmail} className="form-control fs-5" id="exampleInputEmail1" placeholder='Email Address' required />
+                    <input type="email" onBlur={handleEmail} className="form-control fs-6" id="exampleInputEmail1" placeholder='Email Address' required />
                 </div>
                 <div className="mb-3">
-                    <input type="password" onBlur={handlePassword} className="form-control fs-5" id="exampleInputPassword1" placeholder='Password' required />
+                    <input type="password" onBlur={handlePassword} className="form-control fs-6" id="exampleInputPassword1" placeholder='Password' required />
                 </div>
                 <div className="mb-3">
-                    <input type="password" onBlur={handleConfirmPassword} className="form-control fs-5" id="exampleInputConfirmPassword1" placeholder='Confirm Password' required />
+                    <input type="password" onBlur={handleConfirmPassword} className="form-control fs-6" id="exampleInputConfirmPassword1" placeholder='Confirm Password' required />
                 </div>
                 <p className='text-danger'>{error}</p>
                 <button type="submit" className="btn btn-primary w-100 mx-auto fs-5" onClick={() => createUserWithEmailAndPassword(email, password)}>Register</button>

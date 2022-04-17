@@ -11,7 +11,7 @@ const Login = () => {
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
+        error
     ] = useSignInWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
@@ -35,15 +35,15 @@ const Login = () => {
         navigate(from, { replace: true })
     }
     return (
-        <div className='container w-50 mx-auto border p-3 rounded mt-5 shadow'>
+        <div style={{width:"500px"}} className='container mx-auto border p-3 rounded mt-5 shadow'>
             <h2 className='text-primary text-center mt-2'>Please Login</h2>
             <form onSubmit={handleLogin} className='w-75 mx-auto'>
 
                 <div className="mb-3">
-                    <input type="email" className="form-control fs-5" onBlur={handleEmail} id="exampleInputEmail1" placeholder='Email Address' required />
+                    <input type="email" className="form-control fs-6" onBlur={handleEmail} id="exampleInputEmail1" placeholder='Email Address' required />
                 </div>
                 <div className="mb-3">
-                    <input type="password" onBlur={handlePassword} className="form-control fs-5" id="exampleInputPassword1" placeholder='Password' required />
+                    <input type="password" onBlur={handlePassword} className="form-control fs-6" id="exampleInputPassword1" placeholder='Password' required />
                 </div>
 
 
