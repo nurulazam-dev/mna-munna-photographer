@@ -8,18 +8,18 @@ const Footer = () => {
     return (
         <div className='bg-dark w-100 mt-3'>
             <div className='row pt-3'>
-                <div className='text-white col mx-5 '>
+                <div className='text-white col '>
                     <h5 className='my-3 text-center'>Contact us</h5>
-                    <div>
-                    <p>
-                    <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> <span>Chittagong,Bangladesh.</span>
-                    </p>
-                    <p>
-                    <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> <span>+8801#########</span>
-                    </p>
-                    <p>
-                    <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> <span>info@mnaphotograper.com</span>
-                    </p>
+                    <div className='w-50 mx-auto'>
+                        <p>
+                            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> <span>Raozan, Chittagong, Bangladesh.</span>
+                        </p>
+                        <p>
+                            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> <span>+8801#########</span>
+                        </p>
+                        <p>
+                            <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> <span>info@mnaphotograper.com</span>
+                        </p>
                     </div>
                 </div>
                 <div className='text-white col mx-5'>
