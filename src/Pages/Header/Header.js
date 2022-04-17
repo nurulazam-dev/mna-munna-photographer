@@ -19,11 +19,11 @@ const Header = () => {
                         <Navbar.Brand href="#home">Mna Munna Photographer</Navbar.Brand>
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
-                        <Nav.Link as={Link} to="about">About</Nav.Link>
+                        <Nav.Link as={Link} to="/" className='text-white'>Home</Nav.Link>
+                        <Nav.Link as={Link} to="blogs" className='text-white'>Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="about" className='text-white'>About</Nav.Link>
                         {user ? <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign out</button>
-                            : (<Nav.Link as={Link} to="login">
+                            : (<Nav.Link as={Link} to="login" className='text-white'>
                                 Login
                             </Nav.Link>)}
                     </Nav>

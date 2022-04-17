@@ -12,7 +12,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h2>MNA Munna Photographer</h2>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
