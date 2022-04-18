@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <section id="question-answer" className="container mx-auto p-3">
+        <div id="question-answer" className="container mx-auto p-3">
             <h3 className="text-center"><u>Question and Answer:</u></h3>
             <div className="card m-4">
                 <div className="card-header">
@@ -43,7 +43,7 @@ const Blogs = () => {
                    
                 </div>
             </div>
-        </section>
+        </div>
 
     );
 };
