@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
+import Checkout from './Pages/Checkout/Checkout';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -19,6 +20,7 @@ function App() {
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/blogs' element={<Blogs/>}></Route>
+        <Route path='/checkout' element={<Checkout/>}></Route>
 
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
