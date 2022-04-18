@@ -3,7 +3,7 @@ import useServicesData from '../../../hooks/useServicesData';
 import ServiceData from '../ServiceData/ServiceData';
 
 const ServicesData = () => {
-    const [services, setServices] = useServicesData();
+    const [services] = useServicesData();
     return (
         <div>
             {
