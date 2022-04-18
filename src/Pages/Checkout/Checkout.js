@@ -3,7 +3,7 @@ import React from 'react';
 const Checkout = () => {
     return (
         <div>
-            <h2>This is Checkout Route</h2>
+            <h2 className='text-center'>This is Checkout Route</h2>
         </div>
     );
 };
