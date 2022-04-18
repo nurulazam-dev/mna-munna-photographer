@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-// const ServiceData = () => {
+const ServiceData = () => {
 // const ServiceData = ({service}) => {
 // const {name, price,duration}=service;
 
@@ -52,19 +52,19 @@ import { useNavigate } from 'react-router-dom';
                             <h2>Exclusive Package</h2>
                             <h2>$1320</h2>
                             <div>
-                                <p><FontAwesomeIcon icon={faPhotoFilm}></FontAwesomeIcon> Approximately 150-200 High Quality Edited photos</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faPhotoFilm}></FontAwesomeIcon> Approximately 150-200 High Quality Edited photos</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faClock}></FontAwesomeIcon> Duration up to 4 hours</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faClock}></FontAwesomeIcon> Duration up to 4 hours</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faPeopleRoof}></FontAwesomeIcon> Pre-wedding consultation</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faPeopleRoof}></FontAwesomeIcon> Pre-wedding consultation</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faShareNodes}></FontAwesomeIcon> Files provided direct to you online or via USB</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faShareNodes}></FontAwesomeIcon> Files provided direct to you online or via USB</p>
                             </div>
 
-                            <button onClick={handleSelectPackage} style={{ height: "30px" }} className='w-100 mx-auto rounded text-center bg-success text-white border-0'>Select Package</button>
+                            <button onClick={handleSelectPackage} style={{ height: "30px" }} className='fs-5 w-100 mx-auto rounded text-center bg-success text-white border-0'>Select Package</button>
                         </Card.Body>
 
                     </Card>
@@ -74,19 +74,19 @@ import { useNavigate } from 'react-router-dom';
                             <h2>Express Package</h2>
                             <h2>$1650</h2>
                             <div>
-                                <p><FontAwesomeIcon icon={faPhotoFilm}></FontAwesomeIcon> Approximately 320-400 High Quality Edited photos</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faPhotoFilm}></FontAwesomeIcon> Approximately 320-400 High Quality Edited photos</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faClock}></FontAwesomeIcon> Duration up to 6 hours</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faClock}></FontAwesomeIcon> Duration up to 6 hours</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faPeopleRoof}></FontAwesomeIcon> Pre-wedding consultation</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faPeopleRoof}></FontAwesomeIcon> Pre-wedding consultation</p>
                             </div>
                             <div>
-                                <p><FontAwesomeIcon icon={faShareNodes}></FontAwesomeIcon> Files provided direct to you online or via USB</p>
+                                <p className='fs-5'><FontAwesomeIcon icon={faShareNodes}></FontAwesomeIcon> Files provided direct to you online or via USB</p>
                             </div>
 
-                            <button onClick={handleSelectPackage}  style={{ height: "30px" }} className='w-100 mx-auto rounded text-center bg-success text-white border-0'>Select Package</button>
+                            <button onClick={handleSelectPackage}  style={{ height: "30px" }} className='fs-5 w-100 mx-auto rounded text-center bg-success text-white border-0'>Select Package</button>
                         </Card.Body>
 
                     </Card>
@@ -97,6 +97,6 @@ import { useNavigate } from 'react-router-dom';
 
         </div>
     );
-
+}
 
 export default ServiceData;
