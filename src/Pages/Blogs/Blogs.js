@@ -13,11 +13,11 @@ const Blogs = () => {
                 <div className="card-body">
                     <div className="fw-bold"><u>Answer:</u></div> <br />
                     <p>
-                        <span className="fw-bold">Authorization:</span>
-                    </p> 
+                        <span className="fw-bold">Authorization:</span> Authorization is the process of allowing someone to do something or use a resource. Giving someone permission to providing individual users with administrative access to an application.
+                    </p>
                     <br />
                     <p>
-                        <span className="fw-bold">Authentication:</span> 
+                        <span className="fw-bold">Authentication:</span> Authentication is the process by which a user claims that his information is correct. Then authentication process of determining whether it is actually true.
                     </p>
                 </div>
             </div>
@@ -28,7 +28,8 @@ const Blogs = () => {
                     </h6>
                 </div>
                 <div className="card-body">
-                    <p><span className="fw-bold"><u>Answer:</u></span> " " </p>
+                    <p><span className="fw-bold"><u>Answer:</u></span> Google Firebase is a platform for building iOS, Android, and Web apps that use the Google Play services package. It's quite easy to connect and utilize built-in third-party authentication providers, such as Google, Facebook, Twitter, and others with Firebase. </p>
+                    <p>Some other options have to implement authentication.For example: Hasura, Nhost, Deployd, Game Sparks, Playfab, Firehost etc.</p>
                 </div>
             </div>
             <div className="card m-4">
@@ -39,8 +40,9 @@ const Blogs = () => {
                 </div>
                 <div className="card-body">
 
-                    <div className="fw-bold"><u>Answer:</u></div> <br />
-                   
+                    <p><span className="fw-bold"><u>Answer:</u></span> Firebase provide other services than authentication.For example: Web hosting, Google analysis, Cloud firestore, Cloud functions, Cloud Storage, Dynamic Links, Cloud Messaging, Remote Config etc.</p>
+                    
+
                 </div>
             </div>
         </div>
