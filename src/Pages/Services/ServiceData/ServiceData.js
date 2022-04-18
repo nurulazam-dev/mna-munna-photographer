@@ -5,6 +5,10 @@ import { Card, CardGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceData = () => {
+// const ServiceData = ({service}) => {
+// const {price}=service;
+
+
     const navigate = useNavigate();
     const handleSelectPackage = () => {
         navigate('/checkout')
@@ -12,6 +16,7 @@ const ServiceData = () => {
 
     return (
         <div>
+            {/* {price} */}
             <h2 className='text-center text-primary my-3'>Photography Service Packages</h2>
 
             <div className="container">

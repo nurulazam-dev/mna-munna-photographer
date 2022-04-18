@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
-import url from '../services.json'
 
-// console.log(url);
 const useServicesData = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch(url)
+        fetch('data.json')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
