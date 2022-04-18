@@ -2,25 +2,31 @@ import google from "../../../images/Social Logo/google.png"
 import github from "../../../images/Social Logo/github.png"
 import auth from '../../../Firebase/Firebase.init';
 import { useSendPasswordResetEmail, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useRef } from "react";
 
 const SignInWithSocial = () => {
-    // const [email] = useState('');
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const emailRef=useRef('')
+    // const [email] = useRef('');
+    const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
     const [signInWithGithub] = useSignInWithGithub(auth);
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    const passwordReset=async(event)=>{
-        const email=event.target.value;
-        if(email){
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    const passwordReset = async () => {
+        const email = emailRef.current.value;
+        if (email) {
             await sendPasswordResetEmail(email);
             toast("Password Reset email send")
-        }else{toast('Please give your email address')}
+        } else { toast('Please give your email address') }
     }
 
-    const navigate = useNavigate();
+    
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
 
     return (

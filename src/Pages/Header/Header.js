@@ -11,21 +11,21 @@ const Header = () => {
         signOut(auth)
     }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Navbar.Brand href="#home">Mna Munna Photographer</Navbar.Brand>
+                        <Navbar.Brand className='fs-3' as={Link} to='/'>Mna Munna Photographer</Navbar.Brand>
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="/" className='text-white'>Home</Nav.Link>
-                        <Nav.Link as={Link} to="blogs" className='text-white'>Blogs</Nav.Link>
-                        <Nav.Link as={Link} to="about" className='text-white'>About</Nav.Link>
+                        <Nav.Link as={Link} to="/" className='text-white fs-5'>Home</Nav.Link>
+                        <Nav.Link as={Link} to="blogs" className='text-white fs-5'>Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="about" className='text-white fs-5'>About</Nav.Link>
                         {user ? <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign out</button>
-                            : (<Nav.Link as={Link} to="register" className='text-white'>
+                            : (<Nav.Link as={Link} to="register" className='text-white fs-5'>
                                 Register
-                            </Nav.Link>) || (<Nav.Link as={Link} to="login" className='text-white'>
+                            </Nav.Link>) || (<Nav.Link as={Link} to="login" className='text-white fs-5'>
                                 Login
                             </Nav.Link>)
                             }
