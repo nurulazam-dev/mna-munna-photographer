@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Card } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import {
   faClock,
   faPeopleRoof,
   faPhotoFilm,
   faShareNodes,
 } from "@fortawesome/free-solid-svg-icons";
-import { toast } from "react-toastify";
 
 const Service = ({ service }) => {
   const {
+    id,
     name,
     img,
     price,
@@ -19,15 +19,6 @@ const Service = ({ service }) => {
     consultation,
     fileProvided,
   } = service;
-
-  const navigate = useNavigate();
-
-  const handleSelectPackage = () => {
-    toast.success(`You selected: ${name}`);
-    navigate(`/services/${service?.id}`, {
-      state: { selectedService: service },
-    });
-  };
 
   return (
     <div>
@@ -65,20 +56,12 @@ const Service = ({ service }) => {
             <span>{fileProvided}</span>
           </div>
 
-          <Button
-            variant="success"
-            // to={`/services/${service?.id}`}
-            className="w-100 fw-semibold"
-            onClick={handleSelectPackage}
+          <Link
+            to={`/services/${id}`}
+            className="btn btn-success w-100 fw-semibold"
           >
             View Details
-          </Button>
-          {/* <Link
-            to={`/services/${service?.id}`}
-            className="btn btn-primary btn-sm rounded-pill px-3 fw-semibold"
-          >
-            View Details <i className="bi bi-arrow-right ms-1"></i>
-          </Link> */}
+          </Link>
         </Card.Body>
       </Card>
     </div>

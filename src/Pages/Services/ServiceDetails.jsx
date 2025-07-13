@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Button, Container, Row, Col, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,31 +13,31 @@ import { toast } from "react-toastify";
 import useServicesData from "../../hooks/useServicesData";
 
 const ServiceDetails = () => {
-  const location = useLocation();
-  const selectedService = location.state?.selectedService;
-  const [servicesData] = useServicesData();
   const { id } = useParams();
   const navigate = useNavigate();
+  const [servicesData] = useServicesData();
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const found = servicesData?.find((s) => s?.id === id);
-    if (found) {
-      setService(found);
-    } else {
-      toast.error("Service not found");
-      navigate("/services");
+    if (servicesData?.length > 0) {
+      const found = servicesData.find((s) => s.id === id);
+      if (found) {
+        setService(found);
+      } else {
+        toast.error("Service not found!");
+        navigate("/services");
+      }
+      setLoading(false);
     }
-    setLoading(false);
   }, [servicesData, id, navigate]);
 
   const handleSelectPackage = () => {
     toast.success("Package selected!");
-    navigate("/booking");
+    navigate("/booking", { state: { selectedService: service } });
   };
 
-  if (loading) {
+  if (loading || !service) {
     return (
       <Container className="text-center mt-5">
         <Spinner animation="border" variant="primary" />
@@ -50,8 +50,6 @@ const ServiceDetails = () => {
       <Button variant="link" onClick={() => navigate(-1)} className="mb-4">
         <FontAwesomeIcon icon={faArrowLeft} /> Back
       </Button>
-
-      <h2>Booking for: {selectedService?.name || "Unknown Service"}</h2>
 
       <Row className="align-items-center">
         <Col md={6}>
@@ -66,7 +64,9 @@ const ServiceDetails = () => {
         <Col md={6}>
           <h2 className="fw-bold">{service?.name}</h2>
           <h4 className="text-success mb-3">${service?.price}</h4>
-          <p className="text-muted">{service?.description}</p>
+          <p className="text-muted">
+            {service?.description || "No description available."}
+          </p>
 
           <div className="mb-2">
             <FontAwesomeIcon icon={faPhotoFilm} className="me-2 text-dark" />

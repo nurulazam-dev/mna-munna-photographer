@@ -10,7 +10,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Register from "./Pages/Register/Register";
 import Services from "./Pages/Services/ServicesData/Services";
 import ServiceDetails from "./Pages/Services/ServiceDetails";
-import { ToastContainer } from "react-toastify";
+import Booking from "./Pages/Booking";
 // import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetails />} />
+        <Route path="/booking" element={<Booking />} />
         {/*  <Route
           path="/checkout"
           element={
@@ -38,7 +39,6 @@ function App() {
 
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-      <ToastContainer position="top-center" />
     </div>
   );
 }
