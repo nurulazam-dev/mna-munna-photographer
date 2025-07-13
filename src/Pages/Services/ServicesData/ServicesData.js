@@ -8,7 +8,7 @@ const ServicesData = () => {
         <div>
             {
                 services.map(service => <ServiceData
-                    key={service}
+                    key={service.id}
                     service={service}
                 ></ServiceData>)
             }
