@@ -1,52 +1,52 @@
 [
-    {
-        "id": "1",
-        "name": "Classic Package",
-        "img": "https://i.ibb.co/G3rBnDn/5lkhfdh.png",
-        "price": "1100",
-        "approximately": "Approximately 75 High Quality Edited photos",
-        "duration":"Duration up to 2 hours",
-        "consultation":"Pre-wedding consultation",
-        "file provided":"Files provided direct to you online or via USB"
-    },
-    {
-        "id": "2",
-        "name": "Exclusive Package",
-        "img": "https://i.ibb.co/ZTMfyDQ/3-1-d.png",
-        "price": "1320",
-        "approximately": "Approximately 150-200 High Quality Edited photos",
-        "duration":"Duration up to 4 hours",
-        "consultation":"Pre-wedding consultation",
-        "file provided":"Files provided direct to you online or via USB"
-    },
-    {
-        "id": "3",
-        "name": "Express Package",
-        "img": "https://i.ibb.co/X5RVv83/2-1-1.png",
-        "price": "1650",
-        "approximately": "Approximately 325-400 High Quality Edited photos",
-        "duration":"Duration up to 6 hours",
-        "consultation":"Pre-wedding consultation",
-        "file provided":"Files provided direct to you online or via USB"
-    },
-    {
-        "id": "4",
-        "name": "Platinum Package",
-        "img": "https://i.ibb.co/GM8z4sC/1hhdg.png",
-        "price": "2200",
-        "approximately": "Approximately 460-500 High Quality Edited photos",
-        "duration":"Duration up to 8 hours",
-        "consultation":"Pre-wedding consultation",
-        "file provided":"Files provided direct to you online or via USB"
-    },
-    {
-        "id": "5",
-        "name": "Storytelling Package",
-        "img": "https://i.ibb.co/3SS05DV/4lds.png",
-        "price": "2830",
-        "approximately": "Approximately 550-600 High Quality Edited photos",
-        "duration":"Duration up to 10 hours",
-        "consultation":"Pre-wedding consultation",
-        "file provided":"Files provided direct to you online or via USB"
-    }
+  {
+    "id": "1",
+    "name": "Classic Package",
+    "img": "https://i.ibb.co/G3rBnDn/5lkhfdh.png",
+    "price": "1100",
+    "approximately": "Approximately 75 High Quality Edited photos",
+    "duration": "Duration up to 2 hours",
+    "consultation": "Pre-wedding consultation",
+    "fileProvided": "Files provided direct to you online or via USB"
+  },
+  {
+    "id": "2",
+    "name": "Exclusive Package",
+    "img": "https://i.ibb.co/ZTMfyDQ/3-1-d.png",
+    "price": "1320",
+    "approximately": "Approximately 150-200 High Quality Edited photos",
+    "duration": "Duration up to 4 hours",
+    "consultation": "Pre-wedding consultation",
+    "fileProvided": "Files provided direct to you online or via USB"
+  },
+  {
+    "id": "3",
+    "name": "Express Package",
+    "img": "https://i.ibb.co/X5RVv83/2-1-1.png",
+    "price": "1650",
+    "approximately": "Approximately 325-400 High Quality Edited photos",
+    "duration": "Duration up to 6 hours",
+    "consultation": "Pre-wedding consultation",
+    "fileProvided": "Files provided direct to you online or via USB"
+  },
+  {
+    "id": "4",
+    "name": "Platinum Package",
+    "img": "https://i.ibb.co/GM8z4sC/1hhdg.png",
+    "price": "2200",
+    "approximately": "Approximately 460-500 High Quality Edited photos",
+    "duration": "Duration up to 8 hours",
+    "consultation": "Pre-wedding consultation",
+    "fileProvided": "Files provided direct to you online or via USB"
+  },
+  {
+    "id": "5",
+    "name": "Storytelling Package",
+    "img": "https://i.ibb.co/3SS05DV/4lds.png",
+    "price": "2830",
+    "approximately": "Approximately 550-600 High Quality Edited photos",
+    "duration": "Duration up to 10 hours",
+    "consultation": "Pre-wedding consultation",
+    "fileProvided": "Files provided direct to you online or via USB"
+  }
 ]
