@@ -1,40 +1,41 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import banner1 from "../../images/Banner/banner 1.webp"
-import banner2 from "../../images/Banner/banner 2.jfif"
-import banner3 from "../../images/Banner/banner 3.jpg"
+import { Carousel } from "react-bootstrap";
+import banner1 from "../../assets/images/Banner/mna-munna-photographer-banner-1.png";
+import banner2 from "../../assets/images/Banner/mna-munna-photographer-banner-2.png";
+import banner3 from "../../assets/images/Banner/mna-munna-photographer-banner-3.png";
+import banner4 from "../../assets/images/Banner/mna-munna-photographer-banner-4.png";
 
 const Banner = () => {
-    return (
-        <div>
-            <Carousel variant="white">
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={banner1}
-                        alt="First slide"
-                        style={{height: "450px"}}
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={banner2}
-                        alt="Second slide"
-                        style={{height: "450px"}}
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={banner3}
-                        alt="Third slide"
-                        style={{height: "450px"}}
-                    />
-                </Carousel.Item>
-            </Carousel>
-        </div>
-    );
+  const carouselData = [
+    {
+      image: banner1,
+    },
+    {
+      image: banner2,
+    },
+    {
+      image: banner3,
+    },
+    {
+      image: banner4,
+    },
+  ];
+
+  return (
+    <section>
+      <Carousel variant="white">
+        {carouselData?.map((item, index) => (
+          <Carousel.Item key={index}>
+            <img
+              className="d-block w-100"
+              src={item?.image}
+              alt={`Slide ${index + 1}`}
+              style={{ height: "300px" }}
+            />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </section>
+  );
 };
 
 export default Banner;
