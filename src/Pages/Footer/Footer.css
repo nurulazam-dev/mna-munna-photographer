@@ -1,0 +1,25 @@
+.footer {
+  background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+}
+
+.footer h5 {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.footer p,
+.footer li {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #ffc107;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

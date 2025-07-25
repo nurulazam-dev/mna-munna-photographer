@@ -1,50 +1,78 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    return (
-        <div className='bg-dark w-100 mt-3'>
-            <div className='row pt-3'>
-                <div className='text-white col '>
-                    <h4 className='my-3 text-center'>Contact us</h4>
-                    <div className='w-50 mx-auto'>
-                        <p>
-                            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> <span className='mx-2'>Chittagong, Bangladesh.</span>
-                        </p>
-                        <p>
-                            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> <span className='mx-2'>+8801810-000000</span>
-                        </p>
-                        <p>
-                            <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> <span className='mx-1'>info@mnaphotograper.com</span>
-                        </p>
-                    </div>
-                </div>
-                <div className='text-white col mx-5'>
-                    <h4 className='text-center my-3'>Our Policy:</h4>
-                    <div className="w-50 mx-auto">
-                    <h6>Privacy Policy</h6>
-                    <h6>Terms & Conditions</h6>
-                    <h6>Terms of Service</h6>
-                    <h6>Cookie Policy</h6>
-                    </div>
-                </div>
-                <div className='text-white col '>
-                    <h4 className='my-3 text-center'>Important Link</h4>
-                    <div className='w-50 mx-auto'>
-                        <Link to="blogs" className='text-warning fs-5 text-decoration-none'>Blogs</Link> <br />
-                        <Link to="about" className='text-warning fs-5 text-decoration-none'>About</Link> <br />
-                        <Link to="checkout" className='text-warning fs-5 text-decoration-none'>Checkout</Link>
+  const year = new Date().getFullYear();
 
-                    </div>
-                </div>
-            </div>
-            <p className='text-white my-2 py-3 text-center'><small>Copyright © {year} Mna Munna Photographer</small></p>
+  return (
+    <footer className="footer bg-dark text-light pt-5 pb-3">
+      <div className="container">
+        <div className="row text-center text-md-start">
+          <div className="col-md-4">
+            <h5 className="mb-3 border-bottom pb-2">Contact Us</h5>
+            <p>
+              <FontAwesomeIcon icon={faLocationDot} /> Chittagong, Bangladesh
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faPhone} /> +8801810-000000
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} /> info@mnaphotograper.com
+            </p>
+          </div>
+
+          <div className="col-md-4">
+            <h5 className="mb-3 border-bottom pb-2">Our Policies</h5>
+            <ul className="list-unstyled">
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Terms of Service</li>
+              <li>Cookie Policy</li>
+            </ul>
+          </div>
+
+          <div className="col-md-4">
+            <h5 className="mb-3 border-bottom pb-2">Quick Links</h5>
+            <ul className="list-unstyled">
+              <li>
+                <Link to="/blog" className="footer-link">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="footer-link">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className="footer-link">
+                  Register
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-    );
+
+        <hr className="bg-light" />
+
+        <div className="text-center">
+          <small>Copyright © {year} MNA Munna Photographer</small>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
