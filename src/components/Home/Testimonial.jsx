@@ -52,15 +52,15 @@ const Testimonial = () => {
             <Row>
               {group.map((review) => (
                 <Col
-                  key={review.id}
+                  key={review?.id}
                   md={4}
                   className="mb-4 d-flex align-items-stretch"
                 >
                   <Card className="border-0 shadow testimonial-card">
                     <Card.Body className="text-center">
                       <img
-                        src={review.photo}
-                        alt={review.name}
+                        src={review?.photo}
+                        alt={review?.name}
                         className="rounded-circle mb-3"
                         style={{
                           width: "80px",
@@ -68,9 +68,9 @@ const Testimonial = () => {
                           objectFit: "cover",
                         }}
                       />
-                      <h5 className="fw-bold">{review.name}</h5>
-                      <div className="mb-2">{renderStars(review.rating)}</div>
-                      <p className="text-secondary">{review.review}</p>
+                      <h5 className="fw-bold">{review?.name}</h5>
+                      <div className="mb-2">{renderStars(review?.rating)}</div>
+                      <p className="text-secondary">{review?.review}</p>
                     </Card.Body>
                   </Card>
                 </Col>
