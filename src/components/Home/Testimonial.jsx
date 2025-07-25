@@ -46,7 +46,6 @@ const Testimonial = () => {
         controls={false}
         interval={3000}
         pause="hover"
-        className=""
       >
         {groupedReviews.map((group, idx) => (
           <Carousel.Item key={idx}>
