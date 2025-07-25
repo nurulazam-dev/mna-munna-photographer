@@ -1,19 +1,18 @@
-import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faInstagram,
-  faLinkedinIn,
-  faTwitter,
+  faUser,
+  faCamera,
+  faFeather,
+  faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Mohammad Nurul Azam",
+    name: "Nurul Azam",
     role: "Founder & Lead Photographer",
-    img: "https://i.ibb.co/YTjW3vF/team1.jpg",
+    img: "https://i.pravatar.cc/150?img=13",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -25,7 +24,7 @@ const teamMembers = [
     id: 2,
     name: "Ayesha Akter",
     role: "Creative Director",
-    img: "https://i.ibb.co/M7nKb0v/team2.jpg",
+    img: "https://i.pravatar.cc/150?img=36",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -37,7 +36,7 @@ const teamMembers = [
     id: 3,
     name: "Sakib Khan",
     role: "Cinematographer",
-    img: "https://i.ibb.co/svN38FZ/team3.jpg",
+    img: "https://i.pravatar.cc/150?img=56",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -49,7 +48,7 @@ const teamMembers = [
     id: 4,
     name: "Riya Hasan",
     role: "Editor & Designer",
-    img: "https://i.ibb.co/PtKjddZ/team4.jpg",
+    img: "https://i.pravatar.cc/150?img=47",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -61,19 +60,17 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <Container className="py-5">
-      <h2 className="text-center fw-bold mb-4">Meet Our Team</h2>
-      <p className="text-center text-muted mb-5">
-        Passionate creatives dedicated to capturing your perfect moments.
-      </p>
+    <Container className="py-4">
+      <h2 className="fw-bold mb-4 text-primary text-center">Meet Our Team</h2>
+
       <Row>
         {teamMembers.map((member) => (
           <Col md={6} lg={3} key={member.id} className="mb-4">
-            <Card className="border-0 shadow-sm team-card text-center">
+            <Card className="border-0 shadow-lg text-center">
               <Card.Img
                 variant="top"
                 src={member.img}
-                style={{ height: "280px", objectFit: "cover" }}
+                style={{ height: "180px" }}
               />
               <Card.Body>
                 <h5 className="fw-bold mb-1">{member.name}</h5>
@@ -84,27 +81,21 @@ const Team = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon
-                      icon={faFacebook}
-                      className="text-primary"
-                    />
+                    <FontAwesomeIcon icon={faUser} className="text-dark" />
                   </a>
                   <a
                     href={member.socials.instagram}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      className="text-danger"
-                    />
+                    <FontAwesomeIcon icon={faCamera} className="text-danger" />
                   </a>
                   <a
                     href={member.socials.twitter}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon icon={faTwitter} className="text-info" />
+                    <FontAwesomeIcon icon={faFeather} className="text-info" />
                   </a>
                   <a
                     href={member.socials.linkedin}
@@ -112,7 +103,7 @@ const Team = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      icon={faLinkedinIn}
+                      icon={faBriefcase}
                       className="text-primary"
                     />
                   </a>
