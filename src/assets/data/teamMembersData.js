@@ -15,7 +15,7 @@ export const teamMembers = [
     id: 2,
     name: "Ayesha Akter",
     role: "Creative Director",
-    img: "https://i.pravatar.cc/150?img=36",
+    img: "https://i.pravatar.cc/150?img=47",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -39,7 +39,7 @@ export const teamMembers = [
     id: 4,
     name: "Riya Hasan",
     role: "Editor & Designer",
-    img: "https://i.pravatar.cc/150?img=47",
+    img: "https://i.pravatar.cc/150?img=36",
     socials: {
       facebook: "#",
       instagram: "#",

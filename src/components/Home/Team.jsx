@@ -15,46 +15,59 @@ const Team = () => {
 
       <Row>
         {teamMembers?.map((member) => (
-          <Col md={6} lg={3} key={member.id} className="mb-4">
-            <Card className="border-0 shadow-lg text-center">
-              <Card.Img
-                variant="top"
-                src={member.img}
-                style={{ height: "180px" }}
-              />
+          <Col md={6} lg={3} key={member?.id} className="mb-4">
+            <Card className="border-0 team-card shadow-lg text-center hover-effect">
+              <div className="overflow-hidden">
+                <Card.Img
+                  variant="top"
+                  src={member?.img}
+                  style={{ height: "180px", objectFit: "cover" }}
+                  className="team-img"
+                />
+              </div>
               <Card.Body>
-                <h5 className="fw-bold mb-1">{member.name}</h5>
-                <p className="text-muted mb-3">{member.role}</p>
+                <h5 className="fw-bold mb-1">{member?.name}</h5>
+                <p className="text-muted mb-2">{member?.role}</p>
                 <div className="d-flex justify-content-center gap-3">
                   <a
-                    href={member.socials.facebook}
+                    href={member?.socials?.facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    className=""
+                  >
+                    <FontAwesomeIcon
+                      icon={faUser}
+                      className="text-primary fs-5"
+                    />
+                  </a>
+                  <a
+                    href={member?.socials?.instagram}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon icon={faUser} className="text-dark" />
+                    <FontAwesomeIcon
+                      icon={faCamera}
+                      className="text-danger fs-5"
+                    />
                   </a>
                   <a
-                    href={member.socials.instagram}
+                    href={member?.socials?.twitter}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon icon={faCamera} className="text-danger" />
+                    <FontAwesomeIcon
+                      icon={faFeather}
+                      className="text-info fs-5"
+                    />
                   </a>
                   <a
-                    href={member.socials.twitter}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faFeather} className="text-info" />
-                  </a>
-                  <a
-                    href={member.socials.linkedin}
+                    href={member?.socials?.linkedin}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
                       icon={faBriefcase}
-                      className="text-primary"
+                      className="text-primary fs-5"
                     />
                   </a>
                 </div>

@@ -47,10 +47,10 @@ const Testimonial = () => {
         interval={3000}
         pause="hover"
       >
-        {groupedReviews.map((group, idx) => (
+        {groupedReviews?.map((group, idx) => (
           <Carousel.Item key={idx}>
             <Row>
-              {group.map((review) => (
+              {group?.map((review) => (
                 <Col
                   key={review?.id}
                   md={4}

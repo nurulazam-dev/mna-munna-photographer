@@ -7,10 +7,33 @@
   transition: all 0.3s ease;
 }
 
+/* ==================================
+       testimonial section style
+================================== */
 .testimonial-card {
   transition: transform 0.3s ease;
   border-radius: 1rem;
 }
 .testimonial-card:hover {
   transform: translateY(-5px);
+}
+
+/* ==================================
+          Team section style
+================================== */
+.team-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.05);
 }
