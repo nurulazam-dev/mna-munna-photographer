@@ -28,8 +28,8 @@ const Header = () => {
             <Nav.Link as={Link} to="/" className="text-white fs-5">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="blogs" className="text-white fs-5">
-              Blogs
+            <Nav.Link as={Link} to="blog" className="text-white fs-5">
+              Blog
             </Nav.Link>
             <Nav.Link as={Link} to="about" className="text-white fs-5">
               About

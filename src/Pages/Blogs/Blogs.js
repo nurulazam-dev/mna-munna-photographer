@@ -1,53 +1,74 @@
-import React from 'react';
+import React from "react";
+import { Card, Container, Row, Col, Button } from "react-bootstrap";
 
-const Blogs = () => {
-    return (
-        <div id="question-answer" className="container mx-auto p-3">
-            <h3 className="text-center"><u>Question and Answer:</u></h3>
-            <div className="card m-4">
-                <div className="card-header">
-                    <h6>
-                        <span className="fw-bold">1.Question: </span>" Difference between authorization and authentication "
-                    </h6>
-                </div>
-                <div className="card-body">
-                    <div className="fw-bold"><u>Answer:</u></div> <br />
-                    <p>
-                        <span className="fw-bold">Authorization:</span> Authorization is the process of allowing someone to do something or use a resource. Giving someone permission to providing individual users with administrative access to an application.
-                    </p>
-                    <br />
-                    <p>
-                        <span className="fw-bold">Authentication:</span> Authentication is the process by which a user claims that his information is correct. Then authentication process of determining whether it is actually true.
-                    </p>
-                </div>
-            </div>
-            <div className="card m-4">
-                <div className="card-header">
-                    <h6>
-                        <span className="fw-bold">2.Question: </span>" Why are you using firebase? What other options do you have to implement authentication? "
-                    </h6>
-                </div>
-                <div className="card-body">
-                    <p><span className="fw-bold"><u>Answer:</u></span> Google Firebase is a platform for building iOS, Android, and Web apps that use the Google Play services package. It's quite easy to connect and utilize built-in third-party authentication providers, such as Google, Facebook, Twitter, and others with Firebase. </p>
-                    <p>Some other options have to implement authentication.For example: Hasura, Nhost, Deployd, Game Sparks, Playfab, Firehost etc.</p>
-                </div>
-            </div>
-            <div className="card m-4">
-                <div className="card-header">
-                    <h6>
-                        <span className="fw-bold">3.Question: </span>" What other services does firebase provide other than authentication? "
-                    </h6>
-                </div>
-                <div className="card-body">
+const blogPosts = [
+  {
+    id: 1,
+    title: "Mastering Portrait Photography",
+    excerpt:
+      "Learn the key techniques to capture stunning portrait photos with depth, light balance, and perfect composition.",
+    image: "https://source.unsplash.com/500x300/?portrait,photography",
+    date: "July 10, 2025",
+  },
+  {
+    id: 2,
+    title: "Top 10 Wedding Photography Tips",
+    excerpt:
+      "Discover the most essential tips every wedding photographer should know to capture unforgettable moments.",
+    image: "https://source.unsplash.com/500x300/?wedding,photography",
+    date: "June 25, 2025",
+  },
+  {
+    id: 3,
+    title: "Creative Product Photography at Home",
+    excerpt:
+      "Turn your home into a photo studio and learn how to shoot professional product photos with basic tools.",
+    image: "https://source.unsplash.com/500x300/?product,photography",
+    date: "June 5, 2025",
+  },
+  {
+    id: 4,
+    title: "How to Build a Photography Portfolio",
+    excerpt:
+      "Step-by-step guide to building a portfolio that attracts clients and showcases your style effectively.",
+    image: "https://source.unsplash.com/500x300/?portfolio,photographer",
+    date: "May 18, 2025",
+  },
+];
 
-                    <p><span className="fw-bold"><u>Answer:</u></span> Firebase provide other services than authentication.For example: Web hosting, Google analysis, Cloud firestore, Cloud functions, Cloud Storage, Dynamic Links, Cloud Messaging, Remote Config etc.</p>
-                    
-
+const Blog = () => {
+  return (
+    <Container className="py-5">
+      <h2 className="text-center fw-bold mb-5 text-primary">
+        Photography Blog
+      </h2>
+      <Row>
+        {blogPosts.map((post) => (
+          <Col md={6} lg={4} key={post.id} className="mb-4">
+            <Card className="h-100 shadow-sm border-0">
+              <Card.Img
+                variant="top"
+                src={post.image}
+                style={{ height: "200px", objectFit: "cover" }}
+              />
+              <Card.Body className="d-flex flex-column">
+                <Card.Subtitle className="mb-2 text-muted small">
+                  {post.date}
+                </Card.Subtitle>
+                <Card.Title className="fw-bold">{post.title}</Card.Title>
+                <Card.Text className="text-secondary">{post.excerpt}</Card.Text>
+                <div className="mt-auto">
+                  <Button variant="outline-primary" size="sm">
+                    Read More
+                  </Button>
                 </div>
-            </div>
-        </div>
-
-    );
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
 };
 
-export default Blogs;
+export default Blog;
