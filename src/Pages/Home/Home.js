@@ -1,3 +1,4 @@
+import Team from "../../components/Home/Team";
 import Testimonial from "../../components/Home/Testimonial";
 import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner />
       <Services />
       <Testimonial />
+      <Team />
       <Footer />
     </div>
   );
