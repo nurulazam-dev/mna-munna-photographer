@@ -21,20 +21,17 @@ const Banner = () => {
   ];
 
   return (
-    <section>
-      <Carousel variant="white">
-        {carouselData?.map((item, index) => (
-          <Carousel.Item key={index}>
-            <img
-              className="d-block w-100"
-              src={item?.image}
-              alt={`Slide ${index + 1}`}
-              style={{ height: "300px" }}
-            />
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </section>
+    <Carousel variant="white">
+      {carouselData?.map((item, index) => (
+        <Carousel.Item key={index}>
+          <img
+            className="d-block w-100"
+            src={item?.image}
+            alt={`Slide ${index + 1}`}
+          />
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 };
 
