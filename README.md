@@ -81,9 +81,19 @@ A modern, responsive photography service provider web application built with Rea
 
 ---
 
-## 📬 Contact
+## License
 
-For any questions or feedback, please use the [Contact](#) page in the app.
+This project is licensed under the MIT License.
+
+## Author
+
+Developed by [Mohammad Nurul Azam](https://github.com/nurulazam-dev)
+
+---
+
+## 📧 Contact
+
+For support or business inquiries, please contact [nurulazam.dev@gmail.com](mailto:nurulazam.dev@gmail.com).
 
 ---
 
