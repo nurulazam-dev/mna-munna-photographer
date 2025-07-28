@@ -1,5 +1,5 @@
 import brandLogo from "../../assets/images/mna-munna-photographer.png";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
@@ -38,22 +38,26 @@ const Header = () => {
               About
             </Nav.Link>
             {user ? (
-              <button
-                className="btn btn-link text-white text-decoration-none"
-                onClick={handleSignOut}
-              >
-                Sign out
-              </button>
+              <>
+                <span
+                  className="text-info fw-semibold me-2 mt-2"
+                  style={{ fontSize: "1rem" }}
+                >
+                  {user?.email}
+                </span>
+                <Button
+                  variant="outline-light"
+                  size="sm"
+                  onClick={handleSignOut}
+                  className="fw-semibold px-3"
+                >
+                  Sign out
+                </Button>
+              </>
             ) : (
-              (
-                <Nav.Link as={Link} to="register" className="text-white fs-5">
-                  Register
-                </Nav.Link>
-              ) || (
-                <Nav.Link as={Link} to="login" className="text-white fs-5">
-                  Login
-                </Nav.Link>
-              )
+              <Nav.Link as={Link} to="register" className="text-white fs-5">
+                Register
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
