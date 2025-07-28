@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Booking = () => {
   const navigate = useNavigate();
@@ -32,12 +32,20 @@ const Booking = () => {
       !formData.date ||
       !formData.time
     ) {
-      toast.error("Please fill all the fields.");
+      Swal.fire({
+        title: "Please fill all the fields.",
+        icon: "error",
+        draggable: true,
+      });
       return;
     }
 
     console.log("Booking Data:", formData);
-    toast.success("Booking submitted successfully!");
+    Swal.fire({
+      title: "Booking submitted successfully!",
+      icon: "success",
+      draggable: true,
+    });
     navigate("/");
   };
 

@@ -9,8 +9,8 @@ import {
   faShareNodes,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import { toast } from "react-toastify";
 import useServicesData from "../../hooks/useServicesData";
+import Swal from "sweetalert2";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -25,7 +25,11 @@ const ServiceDetails = () => {
       if (found) {
         setService(found);
       } else {
-        toast.error("Service not found!");
+        Swal.fire({
+          title: "Service Not Found",
+          icon: "error",
+          draggable: true,
+        });
         navigate("/services");
       }
       setLoading(false);
@@ -33,7 +37,11 @@ const ServiceDetails = () => {
   }, [servicesData, id, navigate]);
 
   const handleSelectPackage = () => {
-    toast.success("Package selected!");
+    Swal.fire({
+      title: "Package selected!",
+      icon: "success",
+      draggable: true,
+    });
     navigate("/booking", { state: { selectedService: service } });
   };
 
@@ -46,7 +54,7 @@ const ServiceDetails = () => {
   }
 
   return (
-    <Container className="my-5">
+    <Container className="my-4">
       <Button variant="link" onClick={() => navigate(-1)} className="mb-4">
         <FontAwesomeIcon icon={faArrowLeft} /> Back
       </Button>
