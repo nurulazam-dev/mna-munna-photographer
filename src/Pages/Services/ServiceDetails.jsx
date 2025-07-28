@@ -54,7 +54,7 @@ const ServiceDetails = () => {
   }
 
   return (
-    <Container className="my-4">
+    <Container className="my-3">
       <Button variant="link" onClick={() => navigate(-1)} className="mb-4">
         <FontAwesomeIcon icon={faArrowLeft} /> Back
       </Button>
@@ -101,7 +101,7 @@ const ServiceDetails = () => {
             className="fw-semibold"
             onClick={handleSelectPackage}
           >
-            Select This Package
+            Package Booking
           </Button>
         </Col>
       </Row>
