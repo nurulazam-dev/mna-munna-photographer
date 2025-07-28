@@ -10,7 +10,7 @@ import Register from "./Pages/Register/Register";
 import Services from "./Pages/Services/ServicesData/Services";
 import ServiceDetails from "./Pages/Services/ServiceDetails";
 import Booking from "./Pages/Booking";
-import Blog from "./Pages/Blogs/Blogs";
+import Contact from "./components/Home/Contact";
 // import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetails />} />
         <Route path="/booking" element={<Booking />} />

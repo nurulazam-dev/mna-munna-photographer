@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "service_001",
     "name": "Classic Package",
     "img": "https://i.ibb.co/G3rBnDn/5lkhfdh.png",
     "price": "1100",
@@ -10,7 +10,7 @@
     "fileProvided": "Files provided direct to you online or via USB"
   },
   {
-    "id": "2",
+    "id": "service_002",
     "name": "Exclusive Package",
     "img": "https://i.ibb.co/ZTMfyDQ/3-1-d.png",
     "price": "1320",
@@ -20,7 +20,7 @@
     "fileProvided": "Files provided direct to you online or via USB"
   },
   {
-    "id": "3",
+    "id": "service_003",
     "name": "Express Package",
     "img": "https://i.ibb.co/X5RVv83/2-1-1.png",
     "price": "1650",
@@ -30,7 +30,7 @@
     "fileProvided": "Files provided direct to you online or via USB"
   },
   {
-    "id": "4",
+    "id": "service_004",
     "name": "Platinum Package",
     "img": "https://i.ibb.co/GM8z4sC/1hhdg.png",
     "price": "2200",
@@ -40,7 +40,7 @@
     "fileProvided": "Files provided direct to you online or via USB"
   },
   {
-    "id": "5",
+    "id": "service_005",
     "name": "Storytelling Package",
     "img": "https://i.ibb.co/3SS05DV/4lds.png",
     "price": "2830",

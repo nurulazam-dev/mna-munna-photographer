@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-// import url from "../Data/data.json"
 
 const useServicesData = () => {
   const [servicesData, setServicesData] = useState([]);
+
   useEffect(() => {
-    // fetch(url)
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
-      .then((data) => setServicesData(data));
+      .then((data) => setServicesData(data))
+      .catch((error) => {
+        console.error("Failed to fetch services data:", error);
+        setServicesData([]);
+      });
   }, []);
   return [servicesData, setServicesData];
 };

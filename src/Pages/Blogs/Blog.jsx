@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
 
 const blogPosts = [
@@ -38,8 +37,8 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <Container className="py-5">
-      <h2 className="text-center fw-bold mb-5 text-primary">
+    <Container className="py-4">
+      <h2 className="text-center fw-bold mb-3 text-primary">
         Photography Blog
       </h2>
       <Row>
