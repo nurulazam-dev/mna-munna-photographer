@@ -1,6 +1,6 @@
 import { CardGroup } from "react-bootstrap";
-import useServicesData from "../../../hooks/useServicesData";
-import Service from "../ServiceData/Service";
+import useServicesData from "../../hooks/useServicesData";
+import Service from "./Service";
 
 const Services = () => {
   const [servicesData] = useServicesData();

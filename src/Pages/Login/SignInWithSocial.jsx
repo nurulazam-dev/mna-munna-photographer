@@ -1,6 +1,6 @@
-import google from "../../../images/Social Logo/google.png";
-import github from "../../../images/Social Logo/github.png";
-import auth from "../../../Firebase/Firebase.init";
+import google from "../../assets/images/Social-Logo/google.png";
+import github from "../../assets/images/Social-Logo//github.png";
+import auth from "../../Firebase/Firebase.init";
 import {
   useSignInWithGithub,
   useSignInWithGoogle,

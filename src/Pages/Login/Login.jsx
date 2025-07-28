@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/Firebase.init";
-import SignInWithSocial from "./SignInWithSocial/SignInWithSocial";
+import SignInWithSocial from "./SignInWithSocial";
 
 const Login = () => {
   const [email, setEmail] = useState("");

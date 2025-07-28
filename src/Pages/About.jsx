@@ -6,7 +6,7 @@ import {
   faClock,
   faAward,
 } from "@fortawesome/free-solid-svg-icons";
-import brandLogo from "../../assets/images/mna-munna-photographer.png";
+import brandLogo from "../assets/images/mna-munna-photographer.png";
 
 const About = () => {
   return (

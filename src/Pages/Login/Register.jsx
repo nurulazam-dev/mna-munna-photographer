@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
-import SignInWithSocial from "../Login/SignInWithSocial/SignInWithSocial";
+import SignInWithSocial from "./SignInWithSocial";
 
 const Register = () => {
   const [name, setName] = useState("");
