@@ -2,77 +2,56 @@ import google from "../../../images/Social Logo/google.png";
 import github from "../../../images/Social Logo/github.png";
 import auth from "../../../Firebase/Firebase.init";
 import {
-  useSendPasswordResetEmail,
   useSignInWithGithub,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useRef } from "react";
-import Swal from "sweetalert2";
 
 const SignInWithSocial = () => {
-  const emailRef = useRef("");
-  // const [email] = useRef('');
-  const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
-  const [signInWithGithub] = useSignInWithGithub(auth);
-  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  const [signInWithGoogle, user, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
+    useSignInWithGithub(auth);
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const passwordReset = async () => {
-    const email = emailRef.current.value;
-    if (email) {
-      await sendPasswordResetEmail(email);
-      emailRef.current.value = "";
-      Swal.fire({
-        title: "Password Reset email sent",
-        icon: "success",
-        draggable: true,
-      });
-    } else {
-      Swal.fire({
-        title: "Please give your email address",
-        icon: "error",
-        draggable: true,
-      });
-    }
-  };
-
-  if (user) {
+  if (user || githubUser) {
     navigate(from, { replace: true });
   }
 
   return (
     <div>
-      <p className="text-center">
-        If you forget password ?
-        <button
-          onClick={passwordReset}
-          className="btn btn-link text-primary text-decoration-none"
-        >
-          Reset Password
-        </button>
+      <p className="text-center my-2">
+        Forgot password? <a href="reset-password">Reset it</a>
       </p>
-      <div>
+      <hr />
+      <p className="text-center mb-2">Or continue with</p>
+      <div className="d-flex justify-content-center gap-3">
         <button
           onClick={() => signInWithGoogle()}
-          className=" w-50 mx-auto rounded bg-primary d-block border-0 text-center mb-3"
+          disabled={googleLoading}
+          className="border"
         >
-          <img style={{ width: "30px" }} className="mb-1" src={google} alt="" />
-          <span className="fs-6 px-3 text-white">Continue with Google</span>
+          <img style={{ width: "30px" }} className="" src={google} alt="" />
         </button>
-        <p className="text-danger">{error}</p>
-      </div>
-      <div>
+
         <button
           onClick={() => signInWithGithub()}
-          className=" w-50 mx-auto rounded bg-primary d-block border-0 text-center "
+          disabled={githubLoading}
+          className="border"
         >
-          <img style={{ width: "30px" }} className="mb-1" src={github} alt="" />
-          <span className="fs-6 px-3 text-white">Continue with Github</span>
+          <img style={{ width: "30px" }} src={github} alt="" />
         </button>
-        {/* <p>{githubError}</p> */}
+      </div>
+      {/* Error messages */}
+      <div
+        className="text-danger text-center mt-2"
+        style={{ minHeight: "24px" }}
+      >
+        {googleError && googleError.message}
+        {githubError && githubError.message}
       </div>
     </div>
   );

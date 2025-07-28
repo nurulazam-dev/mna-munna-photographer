@@ -38,7 +38,7 @@ const ServiceDetails = () => {
 
   const handleSelectPackage = () => {
     Swal.fire({
-      title: "Package selected!",
+      title: `${service?.name} selected!`,
       icon: "success",
       draggable: true,
     });
@@ -101,7 +101,7 @@ const ServiceDetails = () => {
             className="fw-semibold"
             onClick={handleSelectPackage}
           >
-            Package Booking
+            Booking Package
           </Button>
         </Col>
       </Row>
